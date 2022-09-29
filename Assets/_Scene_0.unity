@@ -315,7 +315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311252620}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc159364c730b4c4ab52034e1d2ea6dc, type: 3}
   m_Name: 
@@ -339,10 +339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf2e1e3363064bcd8a71be9c0dbb7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uitLevel: {fileID: 0}
-  uitShots: {fileID: 0}
-  uitButton: {fileID: 0}
-  castlePos: {x: 0, y: 0, z: 0}
+  uitLevel: {fileID: 1339756138}
+  uitShots: {fileID: 2057232735}
+  uitButton: {fileID: 2121489142}
+  castlePos: {x: 50, y: -9.5, z: 0}
   castles: []
   level: 0
   levelMax: 0
@@ -350,6 +350,63 @@ MonoBehaviour:
   castle: {fileID: 0}
   mode: 0
   showing: Show Slingshot
+--- !u!1001 &347752156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471570, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263155460865471571, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
+      propertyPath: m_Name
+      value: Castle_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1f5aa0bcd4b046418fa9c9408cf06c3, type: 3}
 --- !u!1 &485245863
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &501790800
 Transform:
   m_ObjectHideFlags: 0
@@ -622,7 +679,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 700978443}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 311252626}
+        m_TargetAssemblyTypeName: MissionDemolition, Assembly-CSharp
+        m_MethodName: SwitchView
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &700978443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880727748}
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -10, y: -10, z: 0}
+  m_LocalPosition: {x: -10.8, y: -10, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1572,7 +1641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5263155460865471570, guid: 2dd7be8176ec34257bfe5dd9ad884c64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 5263155460865471570, guid: 2dd7be8176ec34257bfe5dd9ad884c64, type: 3}
       propertyPath: m_LocalPosition.y
