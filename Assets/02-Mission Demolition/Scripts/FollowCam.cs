@@ -59,9 +59,6 @@ public class FollowCam : MonoBehaviour {
             }
         }
 
-        
-
-
-    }
+}
 
    

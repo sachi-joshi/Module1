@@ -50,6 +50,7 @@ public class MissionDemolition : MonoBehaviour {
 
         }
 
+       // Destory old projectiles if they exist
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Projectile");
 
         foreach(GameObject pTemp in gos){
@@ -76,7 +77,7 @@ public class MissionDemolition : MonoBehaviour {
 
     void UpdateGUI(){
         //Show the data in the GUITexts
-        uitLevel.text = "Level: " + (level + 1) + " of" + levelMax;
+        uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
         uitShots.text = "Shots Taken: " + shotsTaken;
 
     }
@@ -87,7 +88,7 @@ public class MissionDemolition : MonoBehaviour {
 	void Update () {
         UpdateGUI();
 
-        //Check for level and
+        //Check for level end
         if((mode==GameMode.playing) && Goal.goalMet){
             //Change mode to stop checking for level end
             mode = GameMode.levelEnd;
@@ -102,10 +103,10 @@ public class MissionDemolition : MonoBehaviour {
     void NextLevel(){
         level++;
         if(level==levelMax){
-            SceneManager.LoadScene("_End_Scene");
             level = 0;
-            return;
+            //return;
         }
+
         StartLevel();
 
     }

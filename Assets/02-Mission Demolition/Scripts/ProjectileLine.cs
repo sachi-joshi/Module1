@@ -7,7 +7,7 @@ public class ProjectileLine : MonoBehaviour
     static public ProjectileLine S;//Singleton
 
     [Header("Set In Inspector")]
-    public float minDist = .1f;
+    public float minDist = 0.1f;
 
     private LineRenderer line;
     private GameObject _poi;
@@ -28,12 +28,10 @@ public class ProjectileLine : MonoBehaviour
     //This is a property(that is, a method masquerading as a field)
     public GameObject poi
     {
-        get
-        {
+        get {
             return (_poi);
         }
-        set
-        {
+        set {
             _poi = value;
             if (_poi != null)
             {
@@ -65,7 +63,7 @@ public class ProjectileLine : MonoBehaviour
 
         if (points.Count == 0)
         {
-            Vector3 launchPosDiff = pt - Slingshot.LAUNCH_POS;
+            Vector3 launchPosDiff = pt - Slingshot.LAUNCH_POS; // to be defined
             //add an extra bit of line ot aid aiming later
             points.Add(pt + launchPosDiff);
             points.Add(pt);
@@ -104,12 +102,12 @@ public class ProjectileLine : MonoBehaviour
     {
         if(poi == null){
             //if there is no poi, search for one
-            if(FollowCam.POI != null){
+            if(FollowCam.POI != null) {
                 if(FollowCam.POI.tag == "Projectile"){
                     poi = FollowCam.POI;
 
                 }
-                else{
+                else {
                     return;//we didnt find a poi
                 }
             }
