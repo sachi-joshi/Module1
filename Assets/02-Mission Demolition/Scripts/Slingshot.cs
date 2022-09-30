@@ -64,7 +64,7 @@ public class Slingshot : MonoBehaviour {
 
     void Update() {
         // If Slingshot is not in aimingMode, don't run this code
-        if (aimingMode) return;
+        if (!aimingMode) return;
 
         // Get the current mouse position in 2D screen coordinates
         Vector3 mousePos2D = Input.mousePosition;
